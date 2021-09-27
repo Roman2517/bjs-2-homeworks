@@ -19,9 +19,12 @@ function getArrayParams(arr) {
   }
 
   avg = sum / arr.length;
-  avg = Number(avg.toFixed(2));
+  avg = avg.toFixed(2);
+  avg = parseFloat(avg);
   
-  return { min: min, max: max, avg: `${avg}` };
+  console.log(typeof avg);
+
+  return { min: min, max: max, avg: avg };
 }
 
 // Задание 2
