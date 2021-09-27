@@ -9,21 +9,14 @@ function getArrayParams(arr) {
   for (let i = 0; i <= arr.length - 1; i++) {
     sum = sum + arr[i];
 
-    if (min >= arr[i]) {
-      min = arr[i];
-    }
+    if (min >= arr[i]) min = arr[i];
 
-    if (max <= arr[i]) {
-      max = arr[i];
-    }
+    if (max <= arr[i]) max = arr[i];
   }
 
   avg = sum / arr.length;
-  avg = avg.toFixed(2);
-  avg = parseFloat(avg);
+  avg = Number(avg.toFixed(2));
   
-  console.log(typeof avg);
-
   return { min: min, max: max, avg: avg };
 }
 
