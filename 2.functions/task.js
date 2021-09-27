@@ -19,9 +19,9 @@ function getArrayParams(arr) {
   }
 
   avg = sum / arr.length;
-  avg = avg.toFixed(2);
-
-  return { min: min, max: max, avg: avg };
+  avg = Number(avg.toFixed(2));
+  
+  return { min: min, max: max, avg: `${avg}` };
 }
 
 // Задание 2
